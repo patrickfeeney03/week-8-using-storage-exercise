@@ -11,13 +11,13 @@ public class CreateFile {
             File myFile = new File("MyFile.txt");
             System.out.println("My file is located at " + myFile.getAbsolutePath());
             try{
-                FileWriter myWriter = new FileWriter(myFile);
-                myWriter.write("This is some text that I aasdasda dASDASDADm writing.");
+                FileWriter myWriter = new FileWriter(myFile, true);
+                myWriter.write("This text gets appended to the file every time I run the code. ");
                 myWriter.close();
 
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            } // If I run this again, the file
         }
 
     }
